@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Post - MyNewSite</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+</head>
+<body>
+<div class="container text-center">
+    <div>
+        <h1>Create Post </h1>
+    </div>
+
+    <form th:action="@{/process_post}" method="post"
+          style="max-width: 600px; margin: 0 auto;"
+          th:object="${post}">
+        <div class="m-3">
+            <div class="form-group row">
+                <label class="col-form-label col-4">title</label>
+                <div class="col-8">
+                    <input type="text" class="form-control" th:field="*{title}" required />
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-form-label col-4">description</label>
+                <div class="col-8">
+                    <textarea name="description" class="form-control" th:field="*{description}" required>Enter text here...</textarea>
+                </div>
+            </div>
+
+            <div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+
+        </div>
+    </form>
+
+</div>
+
+</body>
+</html>

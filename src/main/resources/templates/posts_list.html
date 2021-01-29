@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<body>
+<div id="root">
+    <div class="container">
+        <div class="row">
+            <div class="twelve columns">
+                <h1>My blog</h1>
+                <ul>
+                    <li v-if="post">
+                        <h3>{{post.title}}</h3>
+                        <p>{{post.description}}</p>
+                        <hr />
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

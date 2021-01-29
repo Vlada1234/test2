@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<link th:href="@{/css/main.css}" rel="stylesheet"/>
+<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+<body class='typora-export os-windows'>
+<div class="container text-center">
+<div id='write' class='is-node'>
+    <tr th:each="post : ${listPosts}">
+    <h1 th:text="${post.title}">Title</h1>
+    <p th:text="${post.description}">Description</p>
+        <hr />
+    </tr>
+</div>
+</div>
+</body>
+</html>
